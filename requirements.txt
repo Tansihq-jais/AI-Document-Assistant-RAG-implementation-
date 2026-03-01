@@ -1,0 +1,26 @@
+# AI Document Assistant - Dependencies
+
+# ── Backend ───────────────────────────────────────────────────────────────────
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+python-multipart==0.0.12          # For file uploads
+pydantic==2.10.3
+python-dotenv==1.0.1
+
+# ── RAG & Embeddings ──────────────────────────────────────────────────────────
+openai==1.57.2
+sentence-transformers==3.3.1      # HuggingFace embeddings
+faiss-cpu==1.9.0.post1            # Vector search (use faiss-gpu if GPU available)
+numpy==1.26.4
+
+# ── PDF Processing ────────────────────────────────────────────────────────────
+PyMuPDF==1.25.1                   # Fast PDF text extraction
+
+# ── Frontend ──────────────────────────────────────────────────────────────────
+streamlit==1.41.1
+requests==2.32.3
+
+# ── Dev / Testing ─────────────────────────────────────────────────────────────
+httpx==0.28.1                     # For async API testing
+pytest==8.3.4
+pytest-asyncio==0.24.0
